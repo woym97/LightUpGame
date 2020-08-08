@@ -90,6 +90,7 @@ class Board(QWidget):
         self.blk_sqs = []
         self.get_bl_squares()
         self.success_count = 0
+        self.solvable = 0
 
         # set the title
         self.setWindowTitle("LIGHT UP")
@@ -101,9 +102,37 @@ class Board(QWidget):
         self.iterate_board(self.get_bl_adj)
         self.iterate_board(self.set_bl_val)
         self.add_action_buttons()
+        self.iterate_board(self.validity_check)
+        self.iterate_board(self.check)
+        if self.solvable > 0:
+            print("Unsolvable board generated, regenerating board...")
+            self.reset_puzzle()
+        else:
+            self.iterate_board(self.clear_board)
 
         # show all the widgets
         self.show()
+
+    def validity_check(self, row, col):
+        temp_tile = self.grid.itemAtPosition(row, col).widget()
+        if temp_tile.color == 'black' and temp_tile.val is not None:
+            if int(temp_tile.val) == temp_tile.max_adj:
+                self.set_adj(row, col)
+
+    def set_adj(self, row, col):
+        rng = 1
+        neighbors = [[row, col - rng], [row, col + rng], [row + rng, col], [row - rng, col]]
+        adj_tile_li = []
+        for ti in neighbors:
+            try:
+                adj_tile_li.append(self.grid.itemAtPosition(ti[0], ti[1]).widget())
+            # catch tiles on edges
+            except AttributeError:
+                pass
+        for ti in adj_tile_li:
+            if ti.color == 'white' or ti.color == 'yellow':
+                ti.set_orange()
+                self.update_board(ti)
 
     def add_action_buttons(self):
         reset_button = QPushButton("RESET PUZZLE")
@@ -124,14 +153,26 @@ class Board(QWidget):
             alert = QMessageBox()
             alert.setText('Success!')
             alert.exec_()
+        else:
+            alert = QMessageBox()
+            alert.setText('Incorrect')
+            alert.exec_()
         return
 
     def check(self, row, col):
         temp_tile = self.grid.itemAtPosition(row, col).widget()
         success_li = ['black', 'orange', 'yellow']
+        not_solvable_li = ['red', 'gray']
         if temp_tile.color in success_li:
             self.success_count += 1
+        elif temp_tile.color in not_solvable_li:
+            self.solvable += 1
         return
+
+    def clear_board(self, row, col):
+        temp_tile = self.grid.itemAtPosition(row, col).widget()
+        if temp_tile.color != 'white' and temp_tile.color != 'black':
+            temp_tile.set_white()
 
 
     """--- *** FUNCTIONS BELOW USE ITERATE_BOARD *** ---"""
@@ -188,13 +229,16 @@ class Board(QWidget):
         corners = [[0, 0], [0, b_dim - 1], [b_dim - 1, 0], [b_dim - 1, b_dim - 1]]
         for corner in corners:
             if col == corner[0] and row == corner[1]:
+                max_pos = 2 - tile.bl_adj
                 tile.max_adj = min(2, max_pos)
                 tile.set_value(str(random.randint(0, tile.max_adj)))
                 return
         if row == 0 or col == 0 or row == b_dim - 1 or col == b_dim - 1:
+            max_pos = 3 - tile.bl_adj
             tile.max_adj = min(3, max_pos)
             tile.set_value(str(random.randint(0, tile.max_adj)))
         else:
+            max_pos = 4 - tile.bl_adj
             tile.max_adj = min(4, max_pos)
             tile.set_value(str(random.randint(0, tile.max_adj)))
 
