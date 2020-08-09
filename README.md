@@ -20,10 +20,10 @@ Instructions to install pip can be found here:
 The goal of "Light Up" is to place lights on a given board so that all the tiles on the board are lit
 ### Limitations
 Lights can be placed on any white square with the following exceptions:
-    - Two lights cannot be in the same row or column unless a black square falls in between them
-    - A black tile with a value in it MUST have the same number of lights surrounding it as the value of the tile
-        - Ex: A black tile containing a "0" cannot have a light in any of its 4 adjacent tiles
-        _ Ex: A black tile containing a "1" must have at least one light in any of its 4 adjacent tiles
+ - Two lights cannot be in the same row or column unless a black square falls in between them
+ - A black tile with a value in it MUST have the same number of lights surrounding it as the value of the tile
+    - Ex: A black tile containing a "0" cannot have a light in any of its 4 adjacent tiles
+    - Ex: A black tile containing a "1" must have at least one light in any of its 4 adjacent tiles
 ### User Interface
 **White Tiles:** Tiles that are not lights and are not affected by a beam of light
 **Black Tiles:** Tiles that cannot be interacted with, any beam of light that hits a black square will break
