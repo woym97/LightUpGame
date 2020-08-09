@@ -25,8 +25,8 @@ Lights can be placed on any white square with the following exceptions:
     - Ex: A black tile containing a "0" cannot have a light in any of its 4 adjacent tiles
     - Ex: A black tile containing a "1" must have at least one light in any of its 4 adjacent tiles
 ### User Interface
-**White Tiles:** Tiles that are not lights and are not affected by a beam of light
-**Black Tiles:** Tiles that cannot be interacted with, any beam of light that hits a black square will break
-**Orange Tiles:** Tiles that are lights, will emit a beam of light until a black square or the edge of the board is reached
-**Red Tiles:** Tiles that are lights but are invalid due to the fact that they are on the same row or column as another light
-**Gray Tiles:** Tiles that are adjacent to a black square that has too many lights adjacent to it
+ - **White Tiles:** Tiles that are not lights and are not affected by a beam of light
+ - **Black Tiles:** Tiles that cannot be interacted with, any beam of light that hits a black square will break
+ - **Orange Tiles:** Tiles that are lights, will emit a beam of light until a black square or the edge of the board is reached
+ - **Red Tiles:** Tiles that are lights but are invalid due to the fact that they are on the same row or column as another light
+ - **Gray Tiles:** Tiles that are adjacent to a black square that has too many lights adjacent to it
