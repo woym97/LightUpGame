@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d839e537-2e2d-4ddb-aed7-898d58df709f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LIGHT_UP.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5.6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GRID_TEST.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_TEST.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WINDOW_TEST.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/get-pip.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -192,6 +184,35 @@
       <option name="presentableId" value="Default" />
       <updated>1596295743403</updated>
     </task>
+    <task id="LOCAL-00001" summary="Final Commit">
+      <created>1597007414145</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597007414145</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Final Commit">
+      <created>1597007467028</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597007467028</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Final Commit">
+      <created>1597007530105</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597007530105</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Final Commit">
+      <created>1597007576611</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597007576611</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +227,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Final Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1118" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596299887332">

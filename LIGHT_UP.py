@@ -15,7 +15,7 @@ import random
 
 b_dim = 6          # board dimension
 blk_sqs_max = 15    # max amount of black squares that can show up
-blk_sqs_min = 7     # min amount of black squares that can show up
+blk_sqs_min = 10     # min amount of black squares that can show up
 win_dim = 300       # window dimension
 tile_dim = 30       # tile dimension
 
@@ -187,7 +187,7 @@ class Board(QWidget):
         """
         adds action buttons to puzzle
         """
-        reset_button = QPushButton("RESET PUZZLE")
+        reset_button = QPushButton("NEW PUZZLE")
         reset_button.clicked.connect(self.reset_puzzle)
         check_button = QPushButton("CHECK PUZZLE")
         check_button.clicked.connect(self.check_puzzle)
